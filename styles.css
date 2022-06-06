@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: #0b0930;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    /* To stop the horizonal scroll bar add next */
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 10px;
+    color: #7B6fde
+}
+
+.box {
+    /* //Change the background behind text for the box */
+    background-color: #612897;
+    /* change the text color */
+    color: #fff;
+    /* align the h2 inside to center both horizonally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* change the box sizing */
+    width: 400px;
+    height: 200px;
+    /* Seperate the box's */
+    margin: 10px;
+    /* Give the edges of box a rounding and style making boxes look 3D*/
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgb(83, 83, 83);
+    /* Have box move across on the X access (Left of Right) */
+    transform: translateX(200%);
+    transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-200%);
+}
+
+.box.show {
+    transform: translate(0);
+}
+
+.box h2 {
+    font-size: 45px;
+}
